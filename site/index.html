@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebis Plumbing & Gas | Plumber & Gas Fitter Brisbane & Redlands QLD</title>
+<meta name="description" content="Rebis Plumbing & Gas, servicing all your plumbing needs across Brisbane and the Redlands, QLD. Blocked drains, hot water, gas fitting, leaks and renovations. Call 0467 505 883.">
+<!--
+  Placeholders to fill are listed in CLAUDE.md. Run `npm run check` from the repo root to find any left.
+-->
+<link rel="canonical" href="https://jamesrebis.com/">
+<meta name="theme-color" content="#0d2340">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rebis Plumbing & Gas | Brisbane & Redlands QLD">
+<meta property="og:description" content="You name it? We've done it! Plumbing and gas across Brisbane and the Redlands. Call 0467 505 883.">
+<meta property="og:url" content="https://jamesrebis.com/">
+<meta property="og:image" content="https://jamesrebis.com/images/og.jpg">
+<meta property="og:locale" content="en_AU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2340;
+    --navy-2: #163a63;
+    --navy-3: #081729;
+    --orange: #f47b20;
+    --orange-dark: #db6810;
+    --bg: #ffffff;
+    --soft: #f3f5f8;
+    --line: #e2e7ee;
+    --text: #18222f;
+    --muted: #5c6878;
+    --hero-img: url('images/hero.jpg');
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; font-family: "Barlow", system-ui, sans-serif;
+    font-size: 17px; line-height: 1.6; color: var(--text); background: var(--bg);
+  }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  [id] { scroll-margin-top: 90px; }
+
+  h1, h2, h3, .btn, .logo, .eyebrow, .step-num, nav a {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  }
+  h2 {
+    font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 800; line-height: 1;
+    text-transform: uppercase; color: var(--navy); margin: 0 0 14px;
+  }
+  h3 { line-height: 1.1; }
+  .eyebrow {
+    display: inline-block; font-weight: 700; font-size: .95rem;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+  }
+  .lead { color: var(--muted); font-size: 1.1rem; max-width: 58ch; margin: 0; }
+  section { padding: 92px 0; }
+  .section-head { margin-bottom: 46px; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lead { margin: 0 auto; }
+  .split-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+  .split-head h2 { margin: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-weight: 700; font-size: 1.1rem; letter-spacing: .05em; text-transform: uppercase;
+    text-decoration: none; border: 0; cursor: pointer;
+    padding: 14px 24px; border-radius: 6px; background: var(--orange); color: #fff;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .btn:hover { background: var(--orange-dark); }
+  .btn:active { transform: translateY(1px); }
+  .btn.navy { background: var(--navy); }
+  .btn.navy:hover { background: var(--navy-2); }
+  .btn.outline { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,.75); }
+  .btn.outline:hover { background: rgba(255,255,255,.1); }
+  .btn.line { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 2px var(--navy); }
+  .btn.line:hover { background: var(--navy); color: #fff; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .ico { width: 1em; height: 1em; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); backdrop-filter: blur(6px);
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; gap: 20px; }
+  .logo { text-decoration: none; line-height: 1; color: var(--navy); flex: none; display: inline-flex; align-items: center; gap: 10px; }
+  .logo img { height: 46px; width: auto; }
+  .logo b { display: block; font-size: 1.85rem; font-weight: 800; letter-spacing: .02em; }
+  .logo-txt > span { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .28em; color: var(--orange); margin-top: 3px; }
+  nav { display: flex; gap: 26px; }
+  nav a {
+    text-decoration: none; font-weight: 700; font-size: 1.05rem; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--navy); padding: 6px 0; border-bottom: 2px solid transparent;
+  }
+  nav a:hover { border-bottom-color: var(--orange); }
+  .head-actions { display: flex; align-items: center; gap: 20px; }
+  .head-phone { text-decoration: none; text-align: right; line-height: 1.1; }
+  .head-phone small { display: block; font-size: .76rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+  .head-phone strong { font-family: "Barlow Condensed", sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--navy); }
+  header .btn { padding: 11px 18px; font-size: 1rem; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    color: #fff; padding: 72px 0 92px;
+    background:
+      linear-gradient(105deg, rgba(13,35,64,.96) 0%, rgba(13,35,64,.84) 50%, rgba(13,35,64,.55) 100%),
+      var(--hero-img) center / cover no-repeat;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+    padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: .92rem; margin-bottom: 20px;
+  }
+  .badge i { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 4px rgba(61,220,132,.2); }
+  .hero h1 {
+    font-size: clamp(2.9rem, 7vw, 5.2rem); font-weight: 800; line-height: .95;
+    text-transform: uppercase; margin: 0 0 20px;
+  }
+  .hero h1 em { font-style: normal; color: var(--orange); display: block; }
+  .hero-copy > p { font-size: 1.2rem; color: rgba(255,255,255,.88); max-width: 44ch; margin: 0 0 30px; }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+  .ticks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 26px; }
+  .ticks li { display: flex; align-items: center; gap: 8px; font-weight: 600; color: rgba(255,255,255,.92); }
+  .ticks svg { width: 18px; height: 18px; color: var(--orange); flex: none; }
+
+  /* ---------- Form ---------- */
+  .form-card {
+    background: #fff; color: var(--text); border-radius: 10px; padding: 30px 28px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.28);
+  }
+  .form-card h2 { font-size: 2rem; margin-bottom: 4px; }
+  .form-card > p { margin: 0 0 20px; color: var(--muted); font-size: .98rem; }
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 5px; }
+  .field input, .field select, .field textarea {
+    width: 100%; font: inherit; font-size: 1rem; color: var(--text);
+    padding: 11px 13px; border: 1px solid #cfd6df; border-radius: 6px; background: #fff;
+  }
+  .field textarea { resize: vertical; min-height: 80px; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(244,123,32,.18);
+  }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-card .btn { width: 100%; margin-top: 6px; padding: 15px; }
+  .form-note { font-size: .85rem; color: var(--muted); text-align: center; margin: 12px 0 0; }
+  .form-note a { color: var(--navy); font-weight: 600; }
+  .honey { position: absolute; left: -9999px; }
+  .form-done { display: none; text-align: center; padding: 34px 6px; }
+  .form-done svg { width: 54px; height: 54px; color: #1e9e5a; margin: 0 auto 12px; }
+  .form-done h3 { font-size: 1.8rem; text-transform: uppercase; color: var(--navy); margin: 0 0 6px; }
+  .form-done p { margin: 0; color: var(--muted); }
+  .form-card.sent form, .form-card.sent > h2, .form-card.sent > p { display: none; }
+  .form-card.sent .form-done { display: block; }
+  .form-error { display: none; color: #c0392b; font-size: .9rem; text-align: center; margin-top: 10px; }
+
+  /* ---------- Trust bar ---------- */
+  .trust { background: var(--soft); border-bottom: 1px solid var(--line); }
+  .trust ul { list-style: none; margin: 0 auto; padding: 26px 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .trust li { display: flex; align-items: center; gap: 14px; }
+  .ic {
+    width: 46px; height: 46px; border-radius: 50%; flex: none;
+    background: #fff; color: var(--orange); display: grid; place-items: center;
+    box-shadow: 0 2px 8px rgba(13,35,64,.08);
+  }
+  .ic svg { width: 22px; height: 22px; }
+  .trust strong { display: block; color: var(--navy); font-size: 1.02rem; line-height: 1.2; }
+  .trust small { color: var(--muted); font-size: .9rem; }
+
+  /* ---------- About ---------- */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .about-img { position: relative; }
+  .about-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; }
+  .about-img .tag {
+    position: absolute; right: -18px; bottom: 28px;
+    background: var(--orange); color: #fff; padding: 16px 20px; border-radius: 8px;
+    font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; line-height: 1.05;
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  }
+  .about-img .tag b { display: block; font-size: 1.6rem; font-weight: 800; }
+  .about-img .tag span { font-weight: 600; letter-spacing: .06em; }
+  .about p { color: var(--muted); margin: 0 0 16px; }
+  .about .sign { font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); text-transform: uppercase; margin: 22px 0 26px; }
+  .about .sign small { display: block; font-family: "Barlow", sans-serif; font-size: .9rem; font-weight: 500; color: var(--muted); text-transform: none; }
+  .promise { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 0; padding: 0; list-style: none; }
+  .promise li { display: flex; gap: 10px; align-items: flex-start; font-weight: 600; color: var(--navy); }
+  .promise svg { width: 20px; height: 20px; color: var(--orange); flex: none; margin-top: 3px; }
+
+  /* ---------- Services ---------- */
+  .services { background: var(--soft); }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .svc {
+    background: #fff; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;
+    box-shadow: 0 1px 3px rgba(13,35,64,.06); transition: box-shadow .2s ease, transform .2s ease;
+  }
+  .svc:hover { box-shadow: 0 16px 36px rgba(13,35,64,.13); transform: translateY(-3px); }
+  .svc-body { padding: 26px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+  .svc-ic { width: 54px; height: 54px; margin-bottom: 18px; background: rgba(244,123,32,.1); box-shadow: none; }
+  .svc-ic svg { width: 26px; height: 26px; }
+  .svc h3 { font-size: 1.55rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin: 0 0 6px; }
+  .svc p { margin: 0 0 18px; color: var(--muted); flex: 1; }
+  .svc-link {
+    align-self: flex-start; text-decoration: none; font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--orange);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .svc-link:hover { color: var(--orange-dark); }
+  .svc-link::after { content: "→"; transition: transform .15s ease; }
+  .svc-link:hover::after { transform: translateX(4px); }
+
+  /* ---------- Urgent ---------- */
+  .urgent-wrap { padding: 0 0 92px; background: var(--soft); }
+  .urgent {
+    background: var(--orange); color: #fff; border-radius: 12px; padding: 30px 36px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  }
+  .urgent h2 { color: #fff; font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin: 0 0 4px; }
+  .urgent p { margin: 0; color: rgba(255,255,255,.92); }
+  .urgent .btn { background: var(--navy); font-size: 1.25rem; padding: 16px 26px; }
+  .urgent .btn:hover { background: var(--navy-2); }
+
+  /* ---------- Process ---------- */
+  .process { background: var(--navy); color: #fff; }
+  .process h2 { color: #fff; }
+  .process .lead { color: rgba(255,255,255,.7); }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; position: relative; }
+  .steps::before {
+    content: ""; position: absolute; left: 30px; right: calc((100% - 80px) / 5 - 30px); top: 30px; height: 2px;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.25) 0 8px, transparent 8px 16px);
+  }
+  .step { position: relative; }
+  .step-num {
+    width: 60px; height: 60px; border-radius: 50%; background: var(--orange); color: #fff;
+    display: grid; place-items: center; font-size: 1.7rem; font-weight: 800; margin-bottom: 18px;
+    box-shadow: 0 0 0 8px var(--navy);
+  }
+  .step h3 { font-size: 1.35rem; text-transform: uppercase; margin: 0 0 6px; }
+  .step p { margin: 0; color: rgba(255,255,255,.72); font-size: .98rem; }
+
+  /* ---------- Why ---------- */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .why-card { padding: 28px 26px; border-radius: 10px; background: var(--soft); }
+  .why-card .ic { margin-bottom: 16px; }
+  .why-card h3 { font-size: 1.4rem; text-transform: uppercase; color: var(--navy); margin: 0 0 6px; }
+  .why-card p { margin: 0; color: var(--muted); }
+
+  /* ---------- Reviews ---------- */
+  .reviews { background: var(--soft); }
+  .stars { color: #f5b301; letter-spacing: 2px; font-size: 1.15rem; }
+  .rev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .rev {
+    background: #fff; border-radius: 10px; padding: 26px; display: flex; flex-direction: column;
+    box-shadow: 0 1px 3px rgba(13,35,64,.06);
+  }
+  .rev blockquote { margin: 12px 0 20px; color: var(--text); flex: 1; font-size: 1.02rem; }
+  .rev blockquote.placeholder { color: #9aa5b3; font-style: italic; }
+  .rev footer { display: flex; align-items: center; gap: 12px; background: none; padding: 0; color: inherit; }
+  .avatar {
+    width: 42px; height: 42px; border-radius: 50%; background: var(--navy); color: #fff;
+    display: grid; place-items: center; font-weight: 700; flex: none;
+  }
+  .rev footer strong { display: block; color: var(--navy); line-height: 1.2; }
+  .rev footer small { color: var(--muted); }
+  .rev-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Work ---------- */
+  .socials { display: flex; gap: 10px; flex-wrap: wrap; }
+  .social {
+    display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600;
+    padding: 9px 14px; border: 1px solid var(--line); border-radius: 6px; color: var(--navy);
+  }
+  .social:hover { border-color: var(--navy); }
+  .social svg { width: 18px; height: 18px; }
+  .gallery { columns: 3; column-gap: 22px; }
+  .job { break-inside: avoid; margin: 0 0 22px; background: var(--soft); border-radius: 10px; overflow: hidden; }
+  .job img { width: 100%; height: auto; }
+  .job figcaption { padding: 16px 20px 18px; font-size: .98rem; color: var(--text); }
+  .job figcaption p { margin: 0 0 8px; }
+  .job figcaption p:last-child { margin-bottom: 0; }
+  .job figcaption ul { margin: 4px 0 0; padding-left: 20px; color: var(--muted); }
+  .job figcaption li { margin-bottom: 4px; }
+
+  /* ---------- Areas ---------- */
+  .areas { background: var(--soft); }
+  .areas-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 48px; align-items: start; }
+  .area-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .area-lists div { background: #fff; border-radius: 10px; padding: 24px 26px; }
+  .area-lists h3 { font-size: 1.4rem; text-transform: uppercase; color: var(--navy); margin: 0 0 10px; }
+  .area-lists p { margin: 0; color: var(--muted); }
+  .areas .lead { margin-bottom: 26px; }
+
+  /* ---------- FAQ ---------- */
+  .faq-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+  .faq-side p { color: var(--muted); margin: 0 0 24px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq details:first-child { border-top: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative;
+    font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.35rem;
+    text-transform: uppercase; color: var(--navy); line-height: 1.2;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    font-size: 1.8rem; font-weight: 600; color: var(--orange); transition: transform .2s ease;
+  }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq details p { margin: -6px 0 22px; color: var(--muted); max-width: 62ch; }
+
+  /* ---------- Final CTA ---------- */
+  .final {
+    color: #fff; text-align: center;
+    background:
+      linear-gradient(rgba(13,35,64,.9), rgba(13,35,64,.9)),
+      url('images/cta.jpg') center / cover no-repeat;
+  }
+  .final h2 { color: #fff; font-size: clamp(2.3rem, 5.5vw, 3.6rem); }
+  .final p { color: rgba(255,255,255,.82); font-size: 1.15rem; margin: 0 auto 30px; max-width: 46ch; }
+  .final .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---------- Footer ---------- */
+  .site-foot { background: var(--navy-3); color: rgba(255,255,255,.68); padding: 64px 0 28px; font-size: .97rem; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .site-foot .logo { color: #fff; margin-bottom: 16px; }
+  .site-foot p { margin: 0 0 16px; max-width: 32ch; }
+  .site-foot h4 {
+    font-family: "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: .1em;
+    color: #fff; font-size: 1.05rem; margin: 6px 0 14px;
+  }
+  .site-foot ul { list-style: none; margin: 0; padding: 0; }
+  .site-foot li { padding: 4px 0; }
+  .site-foot a { text-decoration: none; }
+  .site-foot a:hover { color: #fff; }
+  .foot-phone { font-family: "Barlow Condensed", sans-serif; font-size: 1.7rem; font-weight: 800; color: #fff; }
+  .site-foot .social { border-color: rgba(255,255,255,.18); color: #fff; }
+  .foot-bottom { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding-top: 22px; font-size: .88rem; }
+
+  .mobile-bar { display: none; }
+
+  @media (max-width: 1060px) {
+    nav { display: none; }
+    .steps { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+    .steps::before { display: none; }
+  }
+  @media (max-width: 960px) {
+    .hero-grid, .areas-grid, .about-grid, .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-img { max-width: 480px; }
+    .about-img .tag { right: 16px; }
+    .trust ul { grid-template-columns: 1fr 1fr; }
+    .svc-grid, .why-grid, .rev-grid { grid-template-columns: 1fr 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .gallery { columns: 2; }
+  }
+  @media (max-width: 680px) {
+    section { padding: 66px 0; }
+    .urgent-wrap { padding-bottom: 66px; }
+    header .wrap { height: 66px; }
+    .head-actions .btn, .head-phone small { display: none; }
+    .head-phone strong { font-size: 1.35rem; }
+    .logo b { font-size: 1.55rem; }
+    .logo img { height: 40px; }
+    .hero { padding: 44px 0 56px; }
+    .hero .actions .outline { display: none; }
+    .trust ul { grid-template-columns: 1fr; gap: 16px; }
+    .svc-grid, .why-grid, .rev-grid, .area-lists, .promise { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; row-gap: 28px; }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 0 18px; }
+    .step-num { margin: 0; grid-row: span 2; }
+    .urgent { padding: 26px 22px; }
+    .urgent .btn { width: 100%; }
+    .row-2 { grid-template-columns: 1fr; gap: 0; }
+    .form-card { padding: 24px 20px; }
+    .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+    .gallery { columns: 1; }
+    .mobile-bar {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: #fff; box-shadow: 0 -6px 20px rgba(13,35,64,.12);
+    }
+    .mobile-bar .btn { padding: 13px 10px; font-size: 1rem; }
+    .site-foot { padding-bottom: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2L12 3z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.3 1.5 1 2.5 2 3 0-3 0-5.5 1-8.5z"/></symbol>
+  <symbol id="i-drain" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 9h8M7 12h10M8 15h8"/></symbol>
+  <symbol id="i-tank" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="16.5" rx="3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 21.5h6M12 7v5"/><circle cx="12" cy="14.5" r="1.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 9h10a4 4 0 0 1 4 4v1.5M8 9V6M5 6h6M8 6V3.5M17 18.5v.5M17 21.5v.5"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9z"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h16v11H9l-5 4V5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Rebis Plumbing &amp; Gas home"><img src="images/logo-flame.png" alt="" width="37" height="46"><span class="logo-txt"><b>REBIS</b><span>PLUMBING &amp; GAS</span></span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="head-phone" href="tel:+61467505883"><small>Call us</small><strong>0467 505 883</strong></a>
+      <a class="btn" href="#callback">Get a callback</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO + CALLBACK FORM ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="badge"><i></i>Taking bookings across Brisbane &amp; the Redlands</span>
+      <h1>You name it? <em>We've done it!</em></h1>
+      <p>Rebis Plumbing &amp; Gas, servicing all your plumbing needs across Brisbane and the Redlands. One call for plumbing and gas.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+61467505883"><svg><use href="#i-phone"/></svg>0467 505 883</a>
+        <a class="btn outline" href="#services">Our services</a>
+      </div>
+      <ul class="ticks">
+        <li><svg><use href="#i-check"/></svg>Licensed plumber &amp; gas fitter</li>
+        <li><svg><use href="#i-check"/></svg>Upfront quotes</li>
+        <li><svg><use href="#i-check"/></svg>Local &amp; reliable</li>
+      </ul>
+    </div>
+
+    <div class="form-card" id="callback">
+      <h2>Request a callback</h2>
+      <p>Leave your details and we'll give you a call back.</p>
+      <!-- action = the Cloudflare Worker URL (see worker/). On localhost the script below uses http://localhost:8787 instead. -->
+      <form id="cb-form" action="https://rebis-callback.YOUR-SUBDOMAIN.workers.dev" method="POST">
+        <input type="hidden" name="t" value="">
+        <div class="honey" aria-hidden="true"><label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+        <div class="row-2">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required maxlength="100" autocomplete="name"></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required maxlength="30" autocomplete="tel"></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" maxlength="100" autocomplete="address-level2"></div>
+          <div class="field">
+            <label for="f-job">What do you need?</label>
+            <select id="f-job" name="job">
+              <option>General plumbing</option>
+              <option>Blocked drain</option>
+              <option>Leak / burst pipe</option>
+              <option>Hot water</option>
+              <option>Gas fitting</option>
+              <option>Taps &amp; toilets</option>
+              <option>Renovation</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="f-msg">Details <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="f-msg" name="details" rows="3" maxlength="2000"></textarea></div>
+        <button class="btn" type="submit">Call me back</button>
+        <p class="form-error" id="cb-error">Something went wrong. Please call us on 0467 505 883.</p>
+        <p class="form-note">Got a photo of the problem? <a href="sms:+61467505883">Text it to us</a> for a faster quote.<br>We only use your details to contact you about your job.</p>
+      </form>
+      <div class="form-done">
+        <svg><use href="#i-check"/></svg>
+        <h3>Thanks!</h3>
+        <p>We've got your details and will call you back soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <ul>
+    <li><span class="ic"><svg><use href="#i-shield"/></svg></span><div><strong>Licensed &amp; insured</strong><small>Plumbing and gas</small></div></li>
+    <li><span class="ic"><svg><use href="#i-tag"/></svg></span><div><strong>Upfront pricing</strong><small>Know the cost first</small></div></li>
+    <li><span class="ic"><svg><use href="#i-pin"/></svg></span><div><strong>Local to you</strong><small>Brisbane &amp; Redlands</small></div></li>
+    <li><span class="ic"><svg><use href="#i-spark"/></svg></span><div><strong>Tidy work</strong><small>We clean up after</small></div></li>
+  </ul>
+</div>
+
+<!-- ============ ABOUT / MEET THE PLUMBER ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <img src="images/about.jpg" alt="Bathroom fit off by Rebis Plumbing &amp; Gas, with freestanding bath and curved black vanity" loading="lazy">
+      <div class="tag"><b>Plumbing + Gas</b><span>One call, sorted</span></div>
+    </div>
+    <div>
+      <span class="eyebrow">Meet the plumber</span>
+      <h2>Local, licensed and easy to deal with</h2>
+      <p>Rebis Plumbing &amp; Gas is a local business looking after homes and businesses right across Brisbane and the Redlands. Whether it's a dripping tap, a blocked drain, a new hot water system or gas work, we turn up, explain the problem in plain English and give you a price before we start.</p>
+      <p>Because we're licensed for both plumbing and gas, you don't need two trades for one job. Just one call and it's handled.</p>
+      <ul class="promise">
+        <li><svg><use href="#i-check"/></svg>Clear quote before any work</li>
+        <li><svg><use href="#i-check"/></svg>We turn up when we say</li>
+        <li><svg><use href="#i-check"/></svg>Quality parts, done properly</li>
+        <li><svg><use href="#i-check"/></svg>Clean up when we're finished</li>
+      </ul>
+      <div class="sign">James<small>Owner, Rebis Plumbing &amp; Gas</small></div>
+      <a class="btn navy" href="#callback">Book a job</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="split-head">
+      <div>
+        <span class="eyebrow">Our services</span>
+        <h2>Every job, big or small</h2>
+      </div>
+      <p class="lead" style="max-width:44ch">From a dripping tap to a full bathroom reno, we handle residential and commercial plumbing and gas.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-drain"/></svg></span><h3>Blocked drains</h3><p>Kitchen, bathroom, sewer and stormwater drains cleared fast, with the cause found so it doesn't come back.</p><a class="svc-link" href="#callback" data-job="Blocked drain">Get a quote</a></div>
+      </article>
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-tank"/></svg></span><h3>Hot water</h3><p>Repairs and replacements for gas, electric, heat pump and continuous flow hot water systems.</p><a class="svc-link" href="#callback" data-job="Hot water">Get a quote</a></div>
+      </article>
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-flame"/></svg></span><h3>Gas fitting</h3><p>Cooktops, ovens, heaters, BBQ points, new gas lines, gas leak detection and compliance checks.</p><a class="svc-link" href="#callback" data-job="Gas fitting">Get a quote</a></div>
+      </article>
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-drop"/></svg></span><h3>Leaks &amp; burst pipes</h3><p>Hidden leaks found and fixed, burst pipes repaired, and water pressure problems sorted.</p><a class="svc-link" href="#callback" data-job="Leak / burst pipe">Get a quote</a></div>
+      </article>
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-tap"/></svg></span><h3>Taps &amp; toilets</h3><p>Dripping taps, running toilets, new mixers, cisterns and fixture installs done quickly and neatly.</p><a class="svc-link" href="#callback" data-job="Taps &amp; toilets">Get a quote</a></div>
+      </article>
+      <article class="svc">
+        <div class="svc-body"><span class="ic svc-ic"><svg><use href="#i-house"/></svg></span><h3>Renovations</h3><p>Bathroom, kitchen and laundry plumbing for renos, extensions and new builds, from rough-in to fit-off.</p><a class="svc-link" href="#callback" data-job="Renovation">Get a quote</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="urgent-wrap">
+  <div class="wrap">
+    <div class="urgent">
+      <div>
+        <h2>Burst pipe or gas leak?</h2>
+        <p>Don't wait on it. Call now and we'll get to you as fast as we can.</p>
+      </div>
+      <a class="btn" href="tel:+61467505883"><svg><use href="#i-phone"/></svg>0467 505 883</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="process" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Simple, start to finish</h2>
+      <p class="lead">No runaround and no surprises. Here's what happens when you call Rebis.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Get in touch</h3><p>Call, text a photo or request a callback and tell us what's going on.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>We arrive</h3><p>We confirm a time that suits you and turn up when we say we will.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Inspect &amp; quote</h3><p>We find the cause and give you a clear price before any work starts.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Get to work</h3><p>Once you're happy, we fix it properly using quality parts.</p></div>
+      <div class="step"><div class="step-num">5</div><h3>Clean up</h3><p>We test everything, walk you through it and leave the place tidy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Why choose Rebis</span>
+      <h2>A plumber you'll call again</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><span class="ic"><svg><use href="#i-flame"/></svg></span><h3>Plumbing &amp; gas</h3><p>Licensed for both, so one tradie handles the whole job.</p></div>
+      <div class="why-card"><span class="ic"><svg><use href="#i-tag"/></svg></span><h3>Upfront pricing</h3><p>You approve the price before we start. No hidden extras.</p></div>
+      <div class="why-card"><span class="ic"><svg><use href="#i-clock"/></svg></span><h3>On time</h3><p>We show up when we say, or we call ahead to let you know.</p></div>
+      <div class="why-card"><span class="ic"><svg><use href="#i-msg"/></svg></span><h3>Straight talk</h3><p>We explain the problem and your options in plain English.</p></div>
+      <div class="why-card"><span class="ic"><svg><use href="#i-house"/></svg></span><h3>Homes &amp; businesses</h3><p>Residential and commercial work, big jobs and small.</p></div>
+      <div class="why-card"><span class="ic"><svg><use href="#i-spark"/></svg></span><h3>Respect for your place</h3><p>Shoe covers, drop sheets and a proper clean up after.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS (replace placeholders with real reviews, or delete this section) ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="split-head">
+      <div>
+        <span class="eyebrow">Reviews</span>
+        <h2>What locals say</h2>
+      </div>
+      <div class="rev-actions">
+        <a class="btn line" href="https://www.facebook.com/profile.php?id=61585906181825" target="_blank" rel="noopener">See us on Facebook</a>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
+        <footer><span class="avatar">A</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
+        <footer><span class="avatar">B</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
+        <footer><span class="avatar">C</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECENT WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="split-head">
+      <div>
+        <span class="eyebrow">Recent work</span>
+        <h2>On the tools</h2>
+      </div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/rebisplumbing/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@rebisplumbing</a>
+        <a class="social" href="https://www.facebook.com/profile.php?id=61585906181825" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="gallery">
+      <figure class="job">
+        <img src="images/work-1.jpg" alt="Atlas Filtri whole-house water filtration system with three filter housings, plumbed in copper on a brick wall" width="800" height="1067" loading="lazy">
+        <figcaption>
+          <p>Another home water filtration system installed for one very happy family.</p>
+          <p><strong>Atlas Filtri whole-house water filtration system</strong></p>
+          <p>Main benefits for homeowners</p>
+          <ul>
+            <li>Cleaner-looking water by reducing sediment.</li>
+            <li>Improved taste and smell when suitable carbon filtration is fitted.</li>
+            <li>Filtered water supplied to showers, basins, kitchen taps and appliances.</li>
+            <li>Potential reduction in scale buildup with suitable scale treatment.</li>
+            <li>Convenient maintenance through replaceable cartridges or self-cleaning filters.</li>
+          </ul>
+        </figcaption>
+      </figure>
+      <figure class="job">
+        <img src="images/work-4.jpg" alt="Bank of copper water meters for new commercial tenancies" width="800" height="600" loading="lazy">
+        <figcaption>
+          <p>Water meters to new commercial tenancy’s.</p>
+        </figcaption>
+      </figure>
+      <figure class="job">
+        <img src="images/work-2.jpg" alt="Bathroom with freestanding bath, vessel basin on a curved black vanity and wall-mounted mixer" width="800" height="1067" loading="lazy">
+        <figcaption>
+          <p>Stunning bathroom fit off completed. One of my favourite bathrooms to date.</p>
+        </figcaption>
+      </figure>
+      <figure class="job">
+        <img src="images/work-3.jpg" alt="Vessel basin and black mixer on a marble-look benchtop in a beauty salon" width="800" height="1067" loading="lazy">
+        <figcaption>
+          <p>Fit off complete at the newly renovated Ormiston beauty Salon.</p>
+        </figcaption>
+      </figure>
+      <figure class="job">
+        <img src="images/work-5.jpg" alt="Double vessel basins on a timber floating vanity with wall-mounted mixers" width="800" height="1000" loading="lazy">
+        <figcaption>
+          <p>New ensuite and main bathroom in Hawthorn, QLD</p>
+        </figcaption>
+      </figure>
+      <figure class="job">
+        <img src="images/work-6.jpg" alt="Curved white double vanity with fluted basins, brushed brass tapware and backlit mirrors" width="800" height="1000" loading="lazy">
+        <figcaption>
+          <p>Stunning Bathrooms fit off complete at Wolfdene, QLD</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREAS ============ -->
+<section class="areas" id="areas">
+  <div class="wrap areas-grid">
+    <div>
+      <span class="eyebrow">Service areas</span>
+      <h2>Proudly local to Brisbane &amp; the Redlands</h2>
+      <p class="lead">We cover Brisbane and the Redlands. Not sure if we come to you? Just ask.</p>
+      <a class="btn navy" href="#callback">Request a callback</a>
+    </div>
+    <div class="area-lists">
+      <div>
+        <h3>Brisbane</h3>
+        <p>Homes and businesses across Brisbane.</p>
+      </div>
+      <div>
+        <h3>Redlands</h3>
+        <p>Homes and businesses right across the Redlands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions</h2>
+      <p>Can't see your question here? Give us a call and we'll happily help.</p>
+      <a class="btn" href="tel:+61467505883"><svg><use href="#i-phone"/></svg>0467 505 883</a>
+    </div>
+    <div>
+      <details open>
+        <summary>What areas do you service?</summary>
+        <p>We cover Brisbane and the Redlands. If you're nearby and not sure, just call.</p>
+      </details>
+      <details>
+        <summary>Do you do gas work as well as plumbing?</summary>
+        <p>Yes. We're licensed for both plumbing and gas fitting, so we can handle gas cooktops, heaters, hot water, gas lines and leak checks as well as all your plumbing.</p>
+      </details>
+      <details>
+        <summary>Will I know the price before you start?</summary>
+        <p>Yes. We'll inspect the problem, explain what's needed and give you a clear price. Nothing starts until you're happy with it.</p>
+      </details>
+      <details>
+        <summary>Can you help with an emergency?</summary>
+        <p>Call us straight away on 0467 505 883. For a burst pipe, turn off your water at the meter. If you smell gas, turn off the gas at the meter, open windows and don't use switches or flames, then call us or the gas emergency line.</p>
+      </details>
+      <details>
+        <summary>Do you work on commercial properties?</summary>
+        <p>Yes. As well as homes, we look after shops, offices, rentals and other commercial properties across Brisbane and the Redlands.</p>
+      </details>
+      <details>
+        <summary>How do I get a quote?</summary>
+        <p>Call or text 0467 505 883, or fill in the callback form at the top of this page. Texting a photo of the problem often helps us give you a faster idea of cost.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Need a plumber in Brisbane or the Redlands?</h2>
+    <p>Call, text or request a callback and we'll get it sorted.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+61467505883"><svg><use href="#i-phone"/></svg>Call 0467 505 883</a>
+      <a class="btn outline" href="#callback">Request a callback</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#" aria-label="Rebis Plumbing &amp; Gas home"><img src="images/logo-flame.png" alt="" width="37" height="46"><span class="logo-txt"><b>REBIS</b><span>PLUMBING &amp; GAS</span></span></a>
+        <p>Servicing all your plumbing needs across Brisbane and the Redlands. You name it? We've done it!</p>
+        <div class="socials">
+          <a class="social" href="https://www.instagram.com/rebisplumbing/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a class="social" href="https://www.facebook.com/profile.php?id=61585906181825" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Blocked drains</a></li>
+          <li><a href="#services">Hot water</a></li>
+          <li><a href="#services">Gas fitting</a></li>
+          <li><a href="#services">Leaks &amp; burst pipes</a></li>
+          <li><a href="#services">Taps &amp; toilets</a></li>
+          <li><a href="#services">Renovations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Areas</h4>
+        <ul>
+          <li><a href="#areas">Brisbane</a></li>
+          <li><a href="#areas">Redlands</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a class="foot-phone" href="tel:+61467505883">0467 505 883</a></li>
+          <li><a href="sms:+61467505883">Text us a photo</a></li>
+          <li><a href="#callback">Request a callback</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Rebis Plumbing &amp; Gas · Brisbane &amp; Redlands, QLD</span>
+      <span>QBCC 0000000</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn" href="tel:+61467505883"><svg><use href="#i-phone"/></svg>Call now</a>
+  <a class="btn navy" href="#callback">Callback</a>
+</div>
+
+<!-- Helps Google show the business properly in local search -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Rebis Plumbing & Gas",
+  "telephone": "+61467505883",
+  "slogan": "You name it? We've done it!",
+  "url": "https://jamesrebis.com/",
+  "image": "https://jamesrebis.com/images/og.jpg",
+  "areaServed": [
+    { "@type": "City", "name": "Brisbane" },
+    { "@type": "City", "name": "Redland City" }
+  ],
+  "address": { "@type": "PostalAddress", "addressRegion": "QLD", "addressCountry": "AU" },
+  "sameAs": [
+    "https://www.instagram.com/rebisplumbing/",
+    "https://www.facebook.com/profile.php?id=61585906181825"
+  ]
+}
+</script>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // "Get a quote" on a service card pre-selects that job in the form
+  var jobSelect = document.getElementById('f-job');
+  document.querySelectorAll('[data-job]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      jobSelect.value = a.getAttribute('data-job').replace('&amp;', '&');
+      setTimeout(function () { document.getElementById('f-name').focus({ preventScroll: true }); }, 500);
+    });
+  });
+
+  // Callback form -> Cloudflare Worker -> Resend email to the owner.
+  // Without JS the form still posts normally and the worker returns a simple thank-you page.
+  var form = document.getElementById('cb-form');
+  var isLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var endpoint = isLocal ? 'http://localhost:8787' : form.action;
+  form.elements.t.value = Date.now();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type=submit]');
+    var err = document.getElementById('cb-error');
+    btn.disabled = true; btn.textContent = 'Sending...'; err.style.display = 'none';
+    fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (d) {
+          if (!r.ok || !d.ok) throw new Error(d.error || 'Request failed');
+        });
+      })
+      .then(function () { document.getElementById('callback').classList.add('sent'); })
+      .catch(function () { err.style.display = 'block'; btn.disabled = false; btn.textContent = 'Call me back'; });
+  });
+</script>
+</body>
+</html>

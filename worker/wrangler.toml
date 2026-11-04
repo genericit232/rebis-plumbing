@@ -1,0 +1,17 @@
+# Cloudflare Worker that receives the callback form and emails it via Resend.
+# Deploy: npx wrangler deploy      Secret: npx wrangler secret put RESEND_API_KEY
+name = "rebis-callback"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+# Owner's inbox. Comma-separate to send to more than one address.
+TO_EMAIL = "james@jamesrebis.com"
+# Must be on a domain verified in Resend (resend.com/domains).
+FROM_EMAIL = "Rebis Website <website@jamesrebis.com>"
+# Sites allowed to submit the form. Keep the github.io origin until the custom domain works.
+ALLOWED_ORIGINS = "https://jamesrebis.com,https://www.jamesrebis.com,https://genericit232.github.io"
+
+[observability]
+enabled = true

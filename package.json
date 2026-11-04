@@ -1,0 +1,14 @@
+{
+  "name": "rebis-plumbing-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "python3 -m http.server 8000 --directory site",
+    "check": "bash scripts/check.sh",
+    "images": "node scripts/optimize-images.mjs",
+    "logo": "node scripts/build-logo.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

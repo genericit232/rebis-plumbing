@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `npm run dev`. Never commit .dev.vars.
+RESEND_API_KEY=re_your_key_here
+# While testing before the domain is verified in Resend, onboarding@resend.dev works,
+# but it only delivers to the email address your Resend account is registered with.
+TO_EMAIL=you@example.com
+FROM_EMAIL=Rebis Website <onboarding@resend.dev>
+ALLOWED_ORIGINS=http://localhost:8000,http://127.0.0.1:8000
