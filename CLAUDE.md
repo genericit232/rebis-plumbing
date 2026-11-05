@@ -77,7 +77,6 @@ Reviews: only real ones, verbatim. Currently one Facebook recommendation (Erin M
 Still to do:
 - [x] QBCC 15578385 in footer
 - [ ] Add Google reviews (verbatim) when they can be read from a signed-in session
-- [ ] Resend: add `jamesrebis.com` domain, add its DNS records at GoDaddy, create a sending key (runbook step 3)
 - [x] Cloudflare worker deployed, secret set, form action points at it
 - [x] GitHub repo + Pages
 - [x] Custom domain jamesrebis.com live with HTTPS
