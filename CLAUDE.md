@@ -62,10 +62,9 @@ Accounts (all on the project Gmail, separate from the developer's personal accou
 - Cloudflare: token + account id go in `worker/.env` (git-ignored; wrangler reads it).
 
 Worker: deployed at https://rebis-callback.rebis-callback.workers.dev (Cloudflare account 9cff4ce20432e94be6dfbe65d9981ebf).
-**Interim email config:** jamesrebis.com isn't verified in Resend yet, so the live worker was deployed with
-`--var "TO_EMAIL:<project gmail>" --var "FROM_EMAIL:Rebis Website <onboarding@resend.dev>"` (not committed, keeps the Gmail out of the repo).
-A plain `npx wrangler deploy` uses wrangler.toml (website@jamesrebis.com -> james@jamesrebis.com) and **will fail to send until the domain is verified**.
-Once Resend shows jamesrebis.com Verified, run a plain `npx wrangler deploy` to switch leads to James.
+Email: jamesrebis.com is verified in Resend (DKIM + `send` subdomain at GoDaddy). Live config is exactly wrangler.toml:
+website@jamesrebis.com -> james@jamesrebis.com. To test without emailing James: `npx wrangler deploy --var "TO_EMAIL:<project gmail>"`,
+submit, then a plain `npx wrangler deploy` to restore.
 
 GitHub Pages deploys through Actions: if the custom domain setting is ever changed, re-run the deploy
 (`GH_TOKEN=$(gh auth token --user genericit232) gh workflow run pages.yml -R genericit232/rebis-plumbing`), otherwise
@@ -82,7 +81,7 @@ Still to do:
 - [x] Cloudflare worker deployed, secret set, form action points at it
 - [x] GitHub repo + Pages
 - [x] Custom domain jamesrebis.com live with HTTPS
-- [ ] Resend: add DKIM/SPF records for jamesrebis.com at GoDaddy, verify, then plain `wrangler deploy`
+- [x] Resend domain verified; leads go to james@jamesrebis.com
 - [ ] Confirm page claims with James (runbook step 0 item 10)
 
 ## Launch runbook
