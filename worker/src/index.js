@@ -55,7 +55,8 @@ export default {
       data = ct.includes('application/json')
         ? await request.json()
         : Object.fromEntries(await request.formData());
-    } catch {
+    } catch (err) {
+      console.warn('Rejected: unreadable body', { contentType: request.headers.get('Content-Type'), error: String(err) });
       return reply(400, false, 'Could not read the form.');
     }
 
@@ -73,9 +74,16 @@ export default {
       details: clean(data.details, LIMITS.details, true),
     };
 
-    if (!lead.name) return reply(400, false, 'Please enter your name.');
+    if (!lead.name) {
+      console.warn('Rejected: missing name', { fields: Object.keys(data) });
+      return reply(400, false, 'Please enter your name.');
+    }
     const digits = lead.phone.replace(/\D/g, '');
-    if (digits.length < 8 || digits.length > 15) return reply(400, false, 'Please enter a valid phone number.');
+    if (digits.length < 8 || digits.length > 15) {
+      // Log the shape, not the number itself.
+      console.warn('Rejected: phone digit count', { digits: digits.length, length: lead.phone.length });
+      return reply(400, false, 'Please enter a valid phone number.');
+    }
 
     if (!env.RESEND_API_KEY || !env.TO_EMAIL || !env.FROM_EMAIL) {
       console.error('Missing RESEND_API_KEY, TO_EMAIL or FROM_EMAIL');

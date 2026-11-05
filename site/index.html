@@ -862,19 +862,39 @@
   var endpoint = isLocal ? 'http://localhost:8787' : form.action;
   form.elements.t.value = Date.now();
 
+  var phone = form.elements.phone;
+  var err = document.getElementById('cb-error');
+  var errDefault = err.textContent;
+  // Same rule as the worker: 8 to 15 digits, any spacing or +61 format.
+  phone.addEventListener('input', function () { phone.setCustomValidity(''); });
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    var digits = phone.value.replace(/\D/g, '').length;
+    if (digits < 8 || digits > 15) {
+      phone.setCustomValidity('Please enter a phone number, e.g. 0412 345 678.');
+      phone.reportValidity();
+      return;
+    }
     var btn = form.querySelector('button[type=submit]');
-    var err = document.getElementById('cb-error');
     btn.disabled = true; btn.textContent = 'Sending...'; err.style.display = 'none';
     fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
       .then(function (r) {
         return r.json().catch(function () { return {}; }).then(function (d) {
-          if (!r.ok || !d.ok) throw new Error(d.error || 'Request failed');
+          if (!r.ok || !d.ok) {
+            var e2 = new Error(d.error || 'Request failed');
+            // 400 = something in the form needs fixing; show the worker's message. Anything else: offer the phone.
+            e2.userMessage = r.status === 400 && d.error ? d.error : null;
+            throw e2;
+          }
         });
       })
       .then(function () { document.getElementById('callback').classList.add('sent'); })
-      .catch(function () { err.style.display = 'block'; btn.disabled = false; btn.textContent = 'Call me back'; });
+      .catch(function (e2) {
+        if (window.console) console.error('Callback form failed:', e2.message);
+        err.textContent = e2.userMessage || errDefault;
+        err.style.display = 'block'; btn.disabled = false; btn.textContent = 'Call me back';
+      });
   });
 </script>
 </body>
