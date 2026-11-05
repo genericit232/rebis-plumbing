@@ -76,7 +76,7 @@ https://maps.google.com/?cid=6925511879385534287 (review text needs a signed-in 
 Reviews: only real ones, verbatim. Currently one Facebook recommendation (Erin M., 29 Sep 2026).
 
 Still to do:
-- [ ] QBCC licence number (footer `QBCC 0000000`)
+- [x] QBCC 15578385 in footer
 - [ ] Add Google reviews (verbatim) when they can be read from a signed-in session
 - [ ] Resend: add `jamesrebis.com` domain, add its DNS records at GoDaddy, create a sending key (runbook step 3)
 - [x] Cloudflare worker deployed, secret set, form action points at it
