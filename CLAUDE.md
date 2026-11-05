@@ -54,11 +54,11 @@ favourite bathroom = about (also in the gallery). Gallery `work-1..6` captions a
 (including "tenancy’s" and "Wolfdene"); don't "fix" them without asking. Service cards use inline SVG icons instead of photos.
 Service areas: **Brisbane and the Redlands only**, kept high level (no suburb lists). Logan was dropped on purpose.
 
-Accounts (all on genericit232@gmail.com, separate from the developer's personal accounts):
+Accounts (all on the project Gmail, separate from the developer's personal accounts):
 - GitHub `genericit232`, repo https://github.com/genericit232/rebis-plumbing, live at https://genericit232.github.io/rebis-plumbing/.
   This repo's git credential helper pulls `gh auth token --user genericit232`, so pushes work whichever gh account is active.
   For gh commands use `GH_TOKEN=$(gh auth token --user genericit232) gh ... -R genericit232/rebis-plumbing`.
-- Resend: key in `worker/.dev.vars` (git-ignored). Until jamesrebis.com is verified, sending only reaches genericit232@gmail.com.
+- Resend: key in `worker/.dev.vars` (git-ignored). Until jamesrebis.com is verified, sending only reaches the project Gmail (the Resend sign-up address).
 - Cloudflare: token + account id go in `worker/.env` (git-ignored; wrangler reads it).
 
 Google Business Profile lists jamesrebis.com as the website, Mount Cotton QLD, 5.0 rating:
