@@ -260,7 +260,12 @@
     box-shadow: 0 1px 3px rgba(13,35,64,.06);
   }
   .rev blockquote { margin: 12px 0 20px; color: var(--text); flex: 1; font-size: 1.02rem; }
-  .rev blockquote.placeholder { color: #9aa5b3; font-style: italic; }
+  .rev-feature { grid-column: 1 / -1; max-width: 860px; }
+  .rev-feature blockquote { font-size: 1.1rem; }
+  .rev blockquote p { margin: 0 0 12px; }
+  .rev blockquote p:last-child { margin-bottom: 0; }
+  .rec { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .92rem; color: #1877f2; }
+  .rec svg { width: 18px; height: 18px; }
   .rev footer { display: flex; align-items: center; gap: 12px; background: none; padding: 0; color: inherit; }
   .avatar {
     width: 42px; height: 42px; border-radius: 50%; background: var(--navy); color: #fff;
@@ -601,7 +606,7 @@
   </div>
 </section>
 
-<!-- ============ REVIEWS (replace placeholders with real reviews, or delete this section) ============ -->
+<!-- ============ REVIEWS (real reviews only, verbatim. Add a .rev card per review; drop .rev-feature once there are 3+) ============ -->
 <section class="reviews" id="reviews">
   <div class="wrap">
     <div class="split-head">
@@ -610,24 +615,20 @@
         <h2>What locals say</h2>
       </div>
       <div class="rev-actions">
-        <a class="btn line" href="https://www.facebook.com/profile.php?id=61585906181825" target="_blank" rel="noopener">See us on Facebook</a>
+        <a class="btn line" href="https://maps.google.com/?cid=6925511879385534287" target="_blank" rel="noopener">Google reviews</a>
+        <a class="btn line" href="https://www.facebook.com/profile.php?id=61585906181825&amp;sk=reviews" target="_blank" rel="noopener">Facebook reviews</a>
       </div>
     </div>
     <div class="rev-grid">
-      <div class="rev">
-        <div class="stars">★★★★★</div>
-        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
-        <footer><span class="avatar">A</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
-      </div>
-      <div class="rev">
-        <div class="stars">★★★★★</div>
-        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
-        <footer><span class="avatar">B</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
-      </div>
-      <div class="rev">
-        <div class="stars">★★★★★</div>
-        <blockquote class="placeholder">Paste a real customer review here (from Google or Facebook).</blockquote>
-        <footer><span class="avatar">C</span><div><strong>Customer name</strong><small>Suburb</small></div></footer>
+      <div class="rev rev-feature">
+        <div class="rec"><svg><use href="#i-fb"/></svg>Recommends Rebis Plumbing &amp; Gas</div>
+        <blockquote>
+          <p>We had been wanting to get a home filtration system for ages but had looked at a few different options and just weren’t confident about what was actually right for us.</p>
+          <p>We contacted James and he was so helpful. He gave us a few great options at a really affordable price and explained everything clearly, which made the decision really easy.</p>
+          <p>We’re so glad we finally got it done, especially after putting it off for so long! James was great to deal with and made the whole process easy from start to finish.</p>
+          <p>Would definitely recommend James and his plumbing work. Give him a call!</p>
+        </blockquote>
+        <footer><span class="avatar">E</span><div><strong>Erin M.</strong><small>Facebook review</small></div></footer>
       </div>
     </div>
   </div>
