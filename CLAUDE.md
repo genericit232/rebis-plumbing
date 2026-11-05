@@ -61,6 +61,16 @@ Accounts (all on the project Gmail, separate from the developer's personal accou
 - Resend: key in `worker/.dev.vars` (git-ignored). Until jamesrebis.com is verified, sending only reaches the project Gmail (the Resend sign-up address).
 - Cloudflare: token + account id go in `worker/.env` (git-ignored; wrangler reads it).
 
+Worker: deployed at https://rebis-callback.rebis-callback.workers.dev (Cloudflare account 9cff4ce20432e94be6dfbe65d9981ebf).
+**Interim email config:** jamesrebis.com isn't verified in Resend yet, so the live worker was deployed with
+`--var "TO_EMAIL:<project gmail>" --var "FROM_EMAIL:Rebis Website <onboarding@resend.dev>"` (not committed, keeps the Gmail out of the repo).
+A plain `npx wrangler deploy` uses wrangler.toml (website@jamesrebis.com -> james@jamesrebis.com) and **will fail to send until the domain is verified**.
+Once Resend shows jamesrebis.com Verified, run a plain `npx wrangler deploy` to switch leads to James.
+
+GitHub Pages deploys through Actions: if the custom domain setting is ever changed, re-run the deploy
+(`GH_TOKEN=$(gh auth token --user genericit232) gh workflow run pages.yml -R genericit232/rebis-plumbing`), otherwise
+browsers get "Site not found" for a few minutes or longer.
+
 Google Business Profile lists jamesrebis.com as the website, Mount Cotton QLD, 5.0 rating:
 https://maps.google.com/?cid=6925511879385534287 (review text needs a signed-in browser to read).
 Reviews: only real ones, verbatim. Currently one Facebook recommendation (Erin M., 29 Sep 2026).
@@ -69,9 +79,10 @@ Still to do:
 - [ ] QBCC licence number (footer `QBCC 0000000`)
 - [ ] Add Google reviews (verbatim) when they can be read from a signed-in session
 - [ ] Resend: add `jamesrebis.com` domain, add its DNS records at GoDaddy, create a sending key (runbook step 3)
-- [ ] Cloudflare: `npx wrangler login` (token expired), `wrangler secret put RESEND_API_KEY`, deploy, put the workers.dev URL in the form action
+- [x] Cloudflare worker deployed, secret set, form action points at it
 - [x] GitHub repo + Pages
-- [ ] Custom domain: runbook step 7 (the parked GoDaddy A records on the root must be replaced)
+- [x] Custom domain jamesrebis.com live with HTTPS
+- [ ] Resend: add DKIM/SPF records for jamesrebis.com at GoDaddy, verify, then plain `wrangler deploy`
 - [ ] Confirm page claims with James (runbook step 0 item 10)
 
 ## Launch runbook
