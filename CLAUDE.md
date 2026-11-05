@@ -54,12 +54,24 @@ favourite bathroom = about (also in the gallery). Gallery `work-1..6` captions a
 (including "tenancy’s" and "Wolfdene"); don't "fix" them without asking. Service cards use inline SVG icons instead of photos.
 Service areas: **Brisbane and the Redlands only**, kept high level (no suburb lists). Logan was dropped on purpose.
 
+Accounts (all on genericit232@gmail.com, separate from the developer's personal accounts):
+- GitHub `genericit232`, repo https://github.com/genericit232/rebis-plumbing, live at https://genericit232.github.io/rebis-plumbing/.
+  This repo's git credential helper pulls `gh auth token --user genericit232`, so pushes work whichever gh account is active.
+  For gh commands use `GH_TOKEN=$(gh auth token --user genericit232) gh ... -R genericit232/rebis-plumbing`.
+- Resend: key in `worker/.dev.vars` (git-ignored). Until jamesrebis.com is verified, sending only reaches genericit232@gmail.com.
+- Cloudflare: token + account id go in `worker/.env` (git-ignored; wrangler reads it).
+
+Google Business Profile lists jamesrebis.com as the website, Mount Cotton QLD, 5.0 rating:
+https://maps.google.com/?cid=6925511879385534287 (review text needs a signed-in browser to read).
+Reviews: only real ones, verbatim. Currently one Facebook recommendation (Erin M., 29 Sep 2026).
+
 Still to do:
 - [ ] QBCC licence number (footer `QBCC 0000000`)
-- [ ] Real reviews, or delete `<section id="reviews">` and the nav link
+- [ ] Add Google reviews (verbatim) when they can be read from a signed-in session
 - [ ] Resend: add `jamesrebis.com` domain, add its DNS records at GoDaddy, create a sending key (runbook step 3)
 - [ ] Cloudflare: `npx wrangler login` (token expired), `wrangler secret put RESEND_API_KEY`, deploy, put the workers.dev URL in the form action
-- [ ] GitHub: deferred. Replace `GITHUB-USER` in wrangler.toml, then runbook steps 6-7 (the parked GoDaddy A records on the root must be replaced)
+- [x] GitHub repo + Pages
+- [ ] Custom domain: runbook step 7 (the parked GoDaddy A records on the root must be replaced)
 - [ ] Confirm page claims with James (runbook step 0 item 10)
 
 ## Launch runbook
