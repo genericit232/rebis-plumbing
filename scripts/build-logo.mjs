@@ -43,7 +43,5 @@ await icon(64, 'brand/favicon-64.png', 0.1);
 await icon(512, 'brand/icon-512.png', 0.14);
 console.log('bg hex', hex);
 
-// Social share card (1200x630): full logo centred on its own background.
-const card = await sharp(SRC).resize({ width: 1200, height: 560, fit: 'contain', background: hex }).toBuffer();
-await sharp({ create: { width: 1200, height: 630, channels: 3, background: hex } })
-  .composite([{ input: card, gravity: 'center' }]).jpeg({ quality: 85, mozjpeg: true }).toFile('site/images/og.jpg');
+// Social share card: the business card (site/brand/business-card.png) at 1200 wide, uncropped.
+await sharp('site/brand/business-card.png').resize({ width: 1200 }).flatten({ background: hex }).jpeg({ quality: 85, mozjpeg: true }).toFile('site/images/og.jpg');
